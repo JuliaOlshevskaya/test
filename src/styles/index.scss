@@ -13,3 +13,17 @@ kbd {
 mark {
     background: rgb(12, 202, 202);
 }
+table {
+    border: 2px solid black;
+}
+
+thead {
+    color: rgb(108, 8, 201);
+    text-align: left;
+}
+tbody {
+    color: rgb(8, 85, 8);
+}
+tfoot {
+    color: rgb(190, 36, 36);
+}
