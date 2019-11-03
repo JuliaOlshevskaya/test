@@ -57,12 +57,16 @@ caption.textinclass {
 img {
     margin: 10px 15px;
 }
-a {
+a, header {
  color: ivory;
+ font-size: 30px;
+}
+
+h2 {
+    color: red
 }
 
 header, main, aside, footer {
-    // border: 1px solid rgb(114, 70, 70);
     padding: 6px;
     margin: 3px;
 }
