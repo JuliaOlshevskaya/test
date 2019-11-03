@@ -2,9 +2,77 @@
 <html>
 <head></head>
 <body>
-  <h1>Начало курса</h1>
-<h1>Розклад</h1>
-<table>
+  <main>
+<header>
+  <span>Your Header</span>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Your Acc</a>
+    <a href="#">Video</a>
+  </nav>
+</header>
+<section></section>
+<section>
+<h1 id="blueheader">Main Heading</h1>
+<p class="text-align-center textinclass">My First Paragraph</p>
+</section>
+<section id='sectionWithBackground'>
+    <ul>
+      <li>First</li>
+      <li>Second</li>
+      <li>Third</li>
+      <li>and so on...</li>
+    </ul>
+    <h3>My third smal heading</h3>
+    <p class="text-align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </p>
+</section>
+<section class="imageSection">
+  <figure>
+    <img src="../src/assets/sunset.jpg" alt="sunset" 
+    width="740px"
+    height="330px"/>
+    <figcaption>Sunset</figcaption>
+  </figure>
+    <a 
+target="_blank"
+href="https://upload.wikimedia.org/wikipedia/ru/thumb/a/af/Charlie%27s_Angels_%28poster%29.jpg/230px-Charlie%27s_Angels_%28poster%29.jpg">
+Charlie Angels
+</a>
+<a href="https://www.facebook.com">
+Facebook
+</a>
+<figure>
+  <a href="https://en.wikipedia.org/wiki/Husky" target="_blank" >
+  <img src="../src/assets/haski.jpg"
+  alt="мем про хаскі" 
+  width="650px"
+  height="500px"/>
+  </a>
+  <figcaption>Funny Husky</figcaption>
+</figure> 
+</section>
+<section id="articles">
+  <article>
+    <h3>My first article</h3>
+    <p>
+        Поняття мема і його концепція були вперше розроблені Річардом Докінзом в книзі «Егоїстичний ген» 1976 року, і пізніше в його подальшій книзі «Розширений фенотип».
+    </p>
+    <p>Наукове поняття одиниці соціальної еволюції і подібних термінів, які використовують корінь грец. μνημα (транслітерація — mneme) — спогад, пам'ять, вперше згадується у 1904 році німецьким еволюційним біологом Річардом Семоном у науковій праці «Die Mnemische Empfindungen in ihren Beziehungen zu den Originalenempfindungen» (приблизний переклад — «Пам'ять-сприйняття в зв'язку з оригінальними сприйняттями»). За даними Оксфордського словника (Oxford English Dictionary) слово mneme з'явилося в англійській мові у 1921 році, коли книгу Р. Семона було перекладено Л. Сімоном англійською під назвою «The Mneme».</p>
+    <p>В теперішній час існують такі визначення поняття мем:
+    </p>
+    <p>
+        (за Докінзом) Мем — це основна одиниця культурної передачі чи ініціації. (Р. Докінз);
+    </p>
+  </article>
+  <!--<article></article>
+  <article></article> -->
+</section>
+
+  <br />
+  <h1 class="textinclass">Начало курса</h1>
+  <h1 class="textinclass">Розклад</h1>
+<table class="text-align-center">
 <tr>
     <th>Понеділок</th>
     <th>Вівторок</th> 
@@ -45,7 +113,7 @@
 </tr>
 </table>
 <hr />
-<table>
+<table class="text-align-center">
 <thead>
   <tr>
     <th>Понеділок</th>
@@ -92,48 +160,133 @@
 </tfoot>
 </table>
 <hr />
-  <h1>списки</h1>
-  <ul>
-    <li>продукти</li>
-    <li>продукти</li>
-    <li>продукти</li>
-  </ul>
-  <br/>
-<ol start="25">
-  <li>перший</li>
-  <li>другий</li>
-  <li>я третій</li>
-</ol>
-<br/>
-<ol type="I">
-  <li>хліб</li>
-  <li>молоко</li>
-  <li>йогурт</li>
-</ol>
-<br />
-<ol type="1">
-  <li>жахи</li>
-  <li>комедії</li>
-  <li>
-    <ol type="a">
-        <li>музика</li>
-    </ol>
-  </li>
-</ol>
-<hr/>
-<dr>
-  <dt>
-    Coffee
-  </dt>
-  <dd>
-    20hrn
-  </dd>
-  <dt>
-    water
-  </dt>
-  <dd>
-    15 hrn
-  </dd>
-</dr>
+<table>
+  <colgroup>
+  <col span="1"/>
+  <col span="1" style="border: 3px solid black; background: rgb(192, 192, 16);"/>
+  </colgroup>
+  <caption class="textinclass text-align-center">Продано за Вересень</caption>
+  
+  <thead>
+    <tr>
+      <th rowspan="2">Область</th>
+      <th rowspan="2">Місто</th>
+      <th colspan="3">Одяг</th>
+      <th colspan="2">Аксесуари</th>
+    </tr>
+    <tr>
+      <th>Джинси</th>
+      <th>Плаття</th>
+      <th>Носки</th>
+      <th>Сумки</th>
+      <th>Ремені</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="3">Вінницька область</td>
+      <td>Вінниця</td>
+      <td>1500</td>
+      <td>1000</td>
+      <td>200</td>
+      <td>3600</td>
+      <td>350</td> 
+    </tr>
+    <tr>
+        <td>Муровані-Курилівці</td>
+        <td>1100</td>
+        <td>900</td>
+        <td>150</td>
+        <td>3100</td>
+        <td>300</td>
+    </tr>
+    <tr>
+        <td>Козятин</td>
+        <td>1100</td>
+        <td>700</td>
+        <td>500</td>
+        <td>3200</td>
+        <td>400</td>
+    </tr>
+    <tr>
+        <td rowspan="2">Хмельницька область</td>
+        <td>Хмельницький</td>
+        <td>3000</td>
+        <td>1500</td>
+        <td>600</td>
+        <td>5600</td>
+        <td>650</td>
+    </tr>
+    <tr>
+        <td>Ярмоленці</td>
+        <td>800</td>
+        <td>500</td>
+        <td>100</td>
+        <td>600</td>
+        <td>250</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="2">Всього</td>
+      <td>35 000</td>
+      <td>35 000</td>
+      <td>35 000</td>
+      <td>35 000</td>
+      <td>35 000</td>
+    </tr>
+  </tfoot>
+</table>
+</main>
+<aside>
+    <h1>Списки</h1>
+    <ul>
+      <li>продукти</li>
+      <li>продукти</li>
+      <li>продукти</li>
+    </ul>
+  <ol start="10">
+    <li>перший</li>
+    <li>другий</li>
+    <li>я третій</li>
+  </ol>
+  <ol type="I">
+    <li>хліб</li>
+    <li>молоко</li>
+    <li>йогурт</li>
+  </ol>
+  <ol type="1">
+    <li>жахи</li>
+    <li>комедії</li>
+    <li>
+      <ol type="a">
+          <li>музика</li>
+          <li>кіно</li>
+          <li>театр</li>
+      </ol>
+    </li>
+  </ol>
+  <dl>
+    <dt>
+      Coffee
+    </dt>
+    <dd>
+      20hrn
+    </dd>
+    <dt>
+      water
+    </dt>
+    <dd>
+      15 hrn
+    </dd>
+  </dl>
+</aside>
+<footer>
+  <nav>
+    <a href="#">Наші дистрибютори</a>
+    <a href="#">Ліцензії</a>
+    <a href="#">Умови співробітництва</a>
+  </nav>
+</footer>
 </body>
 </html>

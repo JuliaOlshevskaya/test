@@ -1,0 +1,101 @@
+table {
+    border-collapse: collapse;
+}
+
+table, td, tr, th{
+    border: 2px solid black;
+}
+
+thead {
+    color: rgb(108, 8, 201);
+    text-align: left;
+}
+tbody {
+    color: rgb(8, 85, 8);
+}
+tfoot {
+    color: rgb(190, 36, 36);
+}
+figcaption {
+    text-align: right;
+    font-size: 30px;
+}
+
+
+
+
+h1 {
+    color: rgb(62, 173, 168);
+    background: rgb(116, 39, 112);
+}
+#blueheader {
+    color: rgb(221, 111, 133);
+    background: black;
+    text-align: center;
+}
+
+.textinclass {
+    background: yellow;
+    color: #3f0202;
+} 
+
+.text-align-center {
+    text-align: center;
+}
+
+p.textinclass {
+    text-align: center;
+}
+
+caption.textinclass {
+    font-size: 50px;
+}
+
+* {
+    font: 20px arial, sans-serif; 
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#sectionWithBackground {
+    background-color: rgb(211, 208, 58);
+    background-image: url('https://fotopoisk.com.ua/media/uploads/014_06.jpg');
+    // border: 2px solid black;
+    border-width: 3px;
+    border-style: dotted;
+    border-color: brown;
+    border-radius: 18px;
+    // padding: 20px 10px 5px 30px;
+    // padding-left: 40px;
+}
+
+#sectionWithBackground h3 {
+    border-left-color: blueviolet;
+    border-left-width: 9px;
+    border-left-style: solid;
+}
+
+img {
+    margin: 10px 15px;
+}
+
+header, main, aside, footer {
+    border: 1px solid rgb(114, 70, 70);
+    padding: 6px;
+    margin: 3px;
+}
+main {
+    float: left;
+    width: 60%;
+}
+aside {
+    float: right;
+    width: 25%;
+}
+footer {
+    clear: both;
+}
+
+#articles {
+    background-color: rgb(159, 184, 159);
+}
