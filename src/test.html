@@ -2,15 +2,15 @@
 <html>
 <head></head>
 <body>
+    <header class="text-align-center">
+        <span style="color: ivory;">Your Header</span>
+        <nav style="font-size: 30px;">
+          <a href="#">Home</a>
+          <a href="#">Contacts</a>
+          <a href="#">Menu</a>
+        </nav>
+      </header>
   <main>
-<header>
-  <span>Your Header</span>
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Your Acc</a>
-    <a href="#">Video</a>
-  </nav>
-</header>
 <section></section>
 <section>
 <h1 id="blueheader">Main Heading</h1>
@@ -23,38 +23,29 @@
       <li>Third</li>
       <li>and so on...</li>
     </ul>
-    <h3>My third smal heading</h3>
+    <h3 class="text-align-center">My third smal heading</h3>
     <p class="text-align-center">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
     </p>
 </section>
 <section class="imageSection">
   <figure>
     <img src="../src/assets/sunset.jpg" alt="sunset" 
-    width="740px"
-    height="330px"/>
+    width="400px"
+    height="200px"/>
     <figcaption>Sunset</figcaption>
   </figure>
-    <a 
-target="_blank"
-href="https://upload.wikimedia.org/wikipedia/ru/thumb/a/af/Charlie%27s_Angels_%28poster%29.jpg/230px-Charlie%27s_Angels_%28poster%29.jpg">
-Charlie Angels
-</a>
-<a href="https://www.facebook.com">
-Facebook
-</a>
-<figure>
+  <figure>
   <a href="https://en.wikipedia.org/wiki/Husky" target="_blank" >
   <img src="../src/assets/haski.jpg"
   alt="мем про хаскі" 
-  width="650px"
-  height="500px"/>
+  width="400px"/>
   </a>
   <figcaption>Funny Husky</figcaption>
 </figure> 
 </section>
 <section id="articles">
   <article>
-    <h3>My first article</h3>
+    <h3 class="text-align-center">My first article</h3>
     <p>
         Поняття мема і його концепція були вперше розроблені Річардом Докінзом в книзі «Егоїстичний ген» 1976 року, і пізніше в його подальшій книзі «Розширений фенотип».
     </p>
@@ -70,49 +61,7 @@ Facebook
 </section>
 
   <br />
-  <h1 class="textinclass">Начало курса</h1>
-  <h1 class="textinclass">Розклад</h1>
-<table class="text-align-center">
-<tr>
-    <th>Понеділок</th>
-    <th>Вівторок</th> 
-    <th>Середа</th> 
-    <th>Четвер</th> 
-    <th>П'ятниця</th>
-</tr>
-<tr>
-    <td>Home riding</td>
-    <td>Writing</td>
-    <td>Phonostylistic</td>
-    <td>Analytical Reading</td>
-    <td>German Language</td>
-</tr>
-<tr>
-    <td>German Language</td>
-    <td>German Language</td>
-    <td>German Language</td>
-    <td>Home Reading</td>
-    <td>History of English Language</td>
-</tr>
-<tr>
-    <td>German Language</td>
-    <td>Practise of translation</td>
-    <td>Phonostylistic</td>
-    <td>Media Literacy</td>
-    <td>German Language</td>
-</tr>
-<tr>
-    <td>English Speaking</td>
-    <td>Methodology of English teaching</td>
-    <td>Phonostylistic</td>
-    <td>Media Literacy</td>
-</tr>
-<tr>
-  <th>Повна завантаженість:</th>
-  <th>40 робочих годин/тиждень</th>
-</tr>
-</table>
-<hr />
+  <h1 class="textinclass text-align-center">Розклад</h1>
 <table class="text-align-center">
 <thead>
   <tr>
@@ -149,17 +98,18 @@ Facebook
         <td>English Speaking</td>
         <td>Methodology of English teaching</td>
         <td>Phonostylistic</td>
-        <td>Media Literacy</td>
+        <td >Media Literacy</td>
+        <td></td>
     </tr>
 </tbody>
 <tfoot>
     <tr>
-        <td>Повна завантаженість:</td>
-        <td>40 робочих годин/тиждень</td>
+        <td colspan="2">Повна завантаженість:</td>
+        <td colspan="3">40 робочих годин/тиждень</td>
       </tr>
 </tfoot>
 </table>
-<hr />
+<br />
 <table>
   <colgroup>
   <col span="1"/>
@@ -238,50 +188,50 @@ Facebook
   </tfoot>
 </table>
 </main>
-<aside>
-    <h1>Списки</h1>
+<aside> 
+  <span > <h2 style="text-align:center red">My favourite cartoons</h2></span>
     <ul>
-      <li>продукти</li>
-      <li>продукти</li>
-      <li>продукти</li>
+      <li>
+       Disney
+       <ol type="1">
+          <li>Anastasia</li>
+          <li>Beauty & the Beast</li>
+          <li>Mulan</li>
+       </ol>
+      </li>
+      <li>Pixar
+        <ol type="1">
+          <li>Toy Story</li>
+          <li>Finding Nemo</li>
+          <li>The Incredibles
+            <ul type="square">
+              <li>Bob Parr (Mr. Incredible)</li>
+              <li>Helen Parr (Elastigirl)</li>
+              <li>Violet Parr</li>
+              <li>Dash Parr</li>
+              <li>Jack-Jack Parr</li>
+            </ul>
+          </li>
+        </ol>
+      </li>
     </ul>
-  <ol start="10">
-    <li>перший</li>
-    <li>другий</li>
-    <li>я третій</li>
-  </ol>
-  <ol type="I">
-    <li>хліб</li>
-    <li>молоко</li>
-    <li>йогурт</li>
-  </ol>
-  <ol type="1">
-    <li>жахи</li>
-    <li>комедії</li>
-    <li>
-      <ol type="a">
-          <li>музика</li>
-          <li>кіно</li>
-          <li>театр</li>
-      </ol>
-    </li>
-  </ol>
-  <dl>
-    <dt>
-      Coffee
-    </dt>
-    <dd>
-      20hrn
-    </dd>
-    <dt>
-      water
-    </dt>
-    <dd>
-      15 hrn
-    </dd>
-  </dl>
+    <figure>
+    <a href="https://en.wikipedia.org/wiki/The_Incredibles" target="_blanck">
+    <img src="../src/assets/The Incredibles.jpg" alt="The Incredibles" 
+    width="200px"/>
+    <figcaption>The Incredibles</figcaption>
+    </a>
+    </figure>
+    <figure>
+    <a href="https://www.pixar.com/" target="_blanck">
+    <img src="https://i.ytimg.com/vi/UdDZFr31ApE/maxresdefault.jpg" alt="PixarCharacters"
+    width="300px"/>
+    <figcaption>Pixar Characters</figcaption>
+    </a>
+    </figure>
+    
 </aside>
-<footer>
+<footer class="text-align-center">
   <nav>
     <a href="#">Наші дистрибютори</a>
     <a href="#">Ліцензії</a>
