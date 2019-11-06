@@ -1,82 +1,91 @@
+* {
+    // font: 20px arial, sans-serif; 
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 table {
     border-collapse: collapse;
 }
-
 table, td, tr, th{
     border: 2px solid black;
-}
-
-thead {
-    color: rgb(108, 8, 201);
-    text-align: left;
-}
-tbody {
-    color: rgb(8, 85, 8);
-}
-tfoot {
-    color: rgb(190, 36, 36);
 }
 figcaption {
     text-align: center;
     font-size: 15px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-#blueheader {
-    color: rgb(221, 111, 133);
-    background: black;
-    text-align: center;
-}
-
 .textinclass {
     background: yellow;
     color: #3f0202;
+    font-size: 20px;
+    // border: 3px solid red;
 } 
-
 .text-align-center {
     text-align: center;
 }
-
-caption.textinclass {
-    font-size: 30px;
+.text-left {
+    text-align: left;
 }
-* {
-    font: 20px arial, sans-serif; 
-    color: black;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+.text-right{
+    text-align: right;
 }
-
 #sectionWithBackground {
     background-color: rgb(211, 208, 58);
-    background-image: url('https://fotopoisk.com.ua/media/uploads/014_06.jpg');
+    background-image: url('https://i.kym-cdn.com/photos/images/newsfeed/001/505/718/136.jpg');
     border-width: 3px;
     border-style: dotted;
     border-color: brown;
     border-radius: 18px;
 }
-
 img {
     margin: 10px 15px;
 }
-a, header {
- color: ivory;
- font-size: 30px;
+// header {
+//  color: rgb(11, 99, 182);
+//  font-size: 20px;
+// }
+nav a {
+    color: rgb(200, 147, 224);
+    text-decoration: none;
+    text-transform: capitalize;
 }
-
-h2 {
-    color: red
+h1 {
+    color: rgb(200, 147, 224);
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    text-transform: capitalize;
+} 
+h3 {
+    text-align: center;
+    text-transform: capitalize;
 }
+p {
+   text-indent: 30px;
+   word-spacing: 5px;
+   padding: 10px;
+ }
+// .text-lowercase {
+//     text-transform: lowercase;
+// }
+// .text-capitalize {
+//     text-transform: capitalize;
+// }
 
+// h2, h3 {
+//     color: red;
+//     letter-spacing: 2px;
+// }
 header, main, aside, footer {
-    padding: 6px;
+    padding: 3px;
     margin: 3px;
-}
- 
+} 
 header {
-    background-color: rgb(47, 0, 80);
+    background-color: rgb(62, 6, 102);
 }
 main {
     float: left;
-    width: 65%;
+      width: 65%;
 }
 aside {
     float: right;
@@ -84,9 +93,13 @@ aside {
 }
 footer {
     clear: both;
-    background-color: rgb(47, 0, 80)
+    background-color: rgb(47, 0, 80);
 }
-
-#articles {
-    background-color: rgb(159, 184, 159);
+.whiteText {
+   color: ivory;
+}
+.outlineTest {
+ outline-style: solid;
+ outline-color: rgb(214, 248, 19);
+ outline-width: thin;
 }
