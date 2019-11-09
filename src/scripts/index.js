@@ -23,7 +23,7 @@ const user = {
   getNameSurnameBirthday: function() {
     console.log(
       "getNameSurnameBirthday",
-      "Julia" + " " + "Faer" + " " + "20.01.2000"
+      this.name + " " + this.surname + " " + this.birthday
     );
   }
 };
