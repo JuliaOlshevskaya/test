@@ -14,7 +14,7 @@
     <title>Test</title>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
-  <body>
+  <body onload="onPageLoad()">
     <header class="text-align-center">
       <h1>place,where you feel like at home</h1>
       <nav>
@@ -46,9 +46,13 @@
       <p>more text</p>
     </section> -->
       <section>
+        <input type="text" value="daddy" onchange="validateField(this.value)" />
+      </section>
+      <section>
         <p class="text-align-center textinclass outlineTest">
           Memes in our lifes
         </p>
+        <i class="far fa-star"></i>
       </section>
       <section id="sectionWithBackground">
         <ul>
@@ -255,8 +259,23 @@
       </table>
     </main>
     <aside>
-        <i class="fas fa-ticket-alt"></i>
+      <h3
+        class="text-align-center"
+        onmouseover="overIcon()"
+        onmouseout="outIcon()"
+      >
+        You Can Buy Ticket Here
+      </h3>
+      <button onclick="buttonClick()"><i class="fas fa-ticket-alt"></i></button>
       <h2 class="text-align-center">My favourite cartoons</h2>
+      <h3>
+        If you've changed your mind, please, click here and return the ticket
+      </h3>
+      <input
+        type="button"
+        value="What date is it today?"
+        onclick="showTodaysDate()"
+      />
       <ul>
         <li>
           Disney
@@ -307,6 +326,13 @@
           <figcaption>Pixar Characters</figcaption>
         </a>
       </figure>
+      <br />
+      <h3>Write down as many symbols as you can!</h3>
+      <input
+        type="text"
+        onkeydown="console.log('Key down')"
+        onkeyup="console.log('Key up')"
+      />
     </aside>
     <footer class="text-align-center">
       <nav>

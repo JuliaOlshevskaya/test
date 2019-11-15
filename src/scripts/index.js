@@ -1,5 +1,6 @@
 import "../styles/index.scss";
 import "../styles/test.scss";
+import "./events";
 
 const a = 12;
 const b = 4;
