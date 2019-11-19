@@ -1,13 +1,42 @@
 dfn {
-    color: salmon;
+  color: salmon;
 }
 kbd {
-    background: sienna;
+  background: sienna;
 }
 mark {
-    background: rgb(12, 202, 202);
+  background: rgb(12, 202, 202);
 }
 
 col {
-    border: 3px solid black; background: rgb(60, 189, 206)
-} 
+  border: 3px solid black;
+  background: rgb(60, 189, 206);
+}
+
+.ul-styled > li {
+  background-color: rgb(189, 83, 83);
+}
+
+.ol-styled > li > ol {
+  border: black solid 2px;
+}
+.dl-styled > dt {
+  background-color: rgb(113, 204, 21);
+}
+.dl-styled > dd {
+  color: rgb(189, 44, 0);
+}
+
+span + section {
+  background-color: rgba(82, 82, 129, 0.596);
+}
+
+blockquote ~ cite {
+  background-color: rgb(163, 218, 15);
+  border: black dashed 2px;
+}
+
+cite {
+  margin: 4px;
+  padding: 1px;
+}
