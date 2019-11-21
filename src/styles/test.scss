@@ -177,6 +177,18 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  color: rgb(141, 15, 15);
+  font-size: 40px;
+  top: -36px;
+  left: 730px;
+}
+.icon-styled {
+  width: 100%;
+  position: relative;
+  border: 2px solid white;
+  border-top-color: rgba(75, 5, 5, 0.897);
+  bottom: -11px;
 }
 
 .divWithGreetings {
@@ -185,8 +197,8 @@ img {
   text-transform: uppercase;
   position: absolute;
   top: 15%;
-  left: 14%;
-  right: 10%;
+  left: 12%;
+  right: 13%;
   background-color: #eed9b6c2;
   color: rgb(155, 0, 0);
 }
