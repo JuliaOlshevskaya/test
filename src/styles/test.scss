@@ -203,7 +203,9 @@ img {
   background-color: #eed9b6c2;
   color: rgb(155, 0, 0);
 }
-
+.header-position {
+  position: relative;
+}
 .sticky-header {
   position: sticky;
   position: -webkit-sticky;
