@@ -87,16 +87,17 @@ img {
 }
 
 nav a {
-  color: rgb(200, 147, 224);
+  color: black;
   text-decoration: none;
   text-transform: uppercase;
 }
 h1 {
-  color: rgb(200, 147, 224);
+  color: #5a0505;
   font-size: 20px;
   //   font-family: Georgia, "Times New Roman", Times, serif;
   text-align: center;
   text-transform: capitalize;
+  margin: 0;
 }
 h3 {
   text-align: center;
@@ -124,15 +125,15 @@ h2 {
   font-size: 4vw;
 }
 
-header,
 main,
 aside,
 footer {
   padding: 3px;
   margin: 3px;
 }
-header {
-  background-color: rgb(62, 6, 102);
+header,
+nav {
+  background-color: #c8b595d4;
 }
 main {
   float: left;
@@ -144,7 +145,7 @@ aside {
 }
 footer {
   clear: both;
-  background-color: rgb(47, 0, 80);
+  background-color: #c8b595d4;
 }
 .whiteText {
   color: ivory;
@@ -210,4 +211,19 @@ img {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
+}
+
+nav a:link {
+  color: #112489;
+}
+nav a:visited {
+  color: #480d48;
+}
+nav a:hover {
+  border: 1px solid rgb(88, 27, 65);
+  background-color: rgba(82, 28, 49, 0.623);
+  outline: 1px solid rgba(212, 131, 148, 0.863);
+}
+nav a:active {
+  color: rgb(236, 161, 47);
 }
