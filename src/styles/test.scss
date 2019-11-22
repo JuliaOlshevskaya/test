@@ -173,7 +173,7 @@ footer {
 img {
   width: 80%;
 }
-.fas {
+.icon-gift-styled {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,7 +181,8 @@ img {
   color: rgb(141, 15, 15);
   font-size: 40px;
   top: -36px;
-  left: 730px;
+  left: 50%;
+  margin-left: -20px;
 }
 .icon-styled {
   width: 100%;
@@ -201,4 +202,10 @@ img {
   right: 13%;
   background-color: #eed9b6c2;
   color: rgb(155, 0, 0);
+}
+
+.sticky-header {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
 }
