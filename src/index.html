@@ -1,285 +1,248 @@
 <!DOCTYPE html>
-<htm>
-  <!-- <head>
-    <title>Main page</title>
+<html>
+  <head>
+    <title>Bootstrap</title>
   </head>
   <body>
-    <header class="text-align-center textinclass">My Homework</header>
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+      <a class="navbar-brand" href="#">My Memes</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <main>
-      <a href="test.html">Test File</a>
-      <br />
-      <a href="test2.html">Test.Second Eddition</a>
-      <table>
-        <colgroup>
-          <col span="1" />
-        </colgroup>
-        <thead>
-          <tr>
-            <th rowspan="3">Day</th>
-            <th colspan="3">Модуль 2- ProFrontend</th>
-          </tr>
-          <tr>
-            <th colspan="2">План</th>
-            <th rowspan="2">Тема</th>
-          </tr>
-          <tr>
-            <th>Початок</th>
-            <th>Кінець</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td rowspan="2">Понеділок</td>
-            <td rowspan="2">20:00</td>
-            <td rowspan="2">21:00</td>
-            <td>HTML:Списки</td>
-          </tr>
-          <tr>
-            <td>HTML:Таблиці</td>
-          </tr>
-          <tr>
-            <td>Середа</td>
-            <td>19:00</td>
-            <td>22:00</td>
-            <td>HTML:Ссилки і картинки</td>
-          </tr>
-          <tr>
-            <td>П'ятниця</td>
-            <td>21:00</td>
-            <td>22:00</td>
-            <td>Домашка</td>
-          </tr>
-        </tbody>
-      </table>
-      <h1>Списки</h1>
-      <ul class="ul-styled">
-        <li>продукти</li>
-        <li>продукти</li>
-        <li>продукти</li>
-      </ul>
-      <ol>
-        <li>перший</li>
-        <li>другий</li>
-        <li>я третій</li>
-      </ol>
-      <ol type="I">
-        <li>хліб</li>
-        <li>молоко</li>
-        <li>йогурт</li>
-      </ol>
-      <ol type="1" class="ol-styled">
-        <li>жахи</li>
-        <li>комедії</li>
-        <li>
-          <ol type="a">
-            <li>музика</li>
-            <li>кіно</li>
-            <li>театр</li>
-          </ol>
-        </li>
-      </ol>
-      <dl class="dl-styled">
-        <dt>
-          Coffee
-        </dt>
-        <dd>
-          20hrn
-        </dd>
-        <dt>
-          water
-        </dt>
-        <dd>
-          15 hrn
-        </dd>
-      </dl>
-      <section>
-        <h1>Video</h1>
-        <video controls width="450px">
-          <source src="../src/assets/video/BEST MEMES COMPILATION V69.mp4" />
-          The Meme video
-        </video>
-        <br />
-        <audio controls>
-          <source
-            src="../src/assets/audio/topmyz.com_1563524292_sam-smith-how-do-you-sleep.mp3"
-            type="audio/mpeg"
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Disabled</a
+            >
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="dropdown01"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+              >Dropdown</a
+            >
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input
+            class="form-control mr-sm-2"
+            type="text"
+            placeholder="Search"
+            aria-label="Search"
           />
-        </audio>
-        <br />
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube.com/embed/2aK8hy50fS4"
-          frameborder="0"
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen
-        ></iframe>
-      </section>
-    </main>
-    <aside>
-      <abbr title="Hyper Text Markup Langeage">HTML</abbr> is so cool
-      <br />
-      <address>
-        Ukraine, Vinnitsya, Shimka st.
-      </address>
-      <br />
-      <b>
-        28.01.2000
-      </b>
-      Мое День Рождения!!!
-      <blockquote cite="https://en.wikipedia.org/wiki/Ray_Bradbury">
-        Like what you do, and do what you like
-      </blockquote>
-      <cite>
-        Fahrenheit 451
-      </cite>
-      was written by Ray Bradbury
-      <br />
-      <code>
-        console.log('I am in code')
-      </code>
-      <br />
-      My favourite food
-      <del>
-        pizza
-      </del>
-      <ins>salad</ins>
-      <br />
-      <span
-        >Trying to make up some siblings relationship between tags in css</span
-      >
-      <section>End here you may see a result</section>
-      <dfn title="Hyper Text Markup Langeage">
-        HTML
-      </dfn>
-      Hyper Text Markup Langeage
-      <br />
-      <dfn title="CSS">CSS</dfn> -Styles
-      <br />
-      <em>
-        I believe I can fly
-      </em>
-      <div>
-        hfhfhfhfhf
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">
+            Search
+          </button>
+        </form>
       </div>
-      <br />
-      <i>
-        Hello Italic! My husband is Slavik
-      </i>
-      <br />
-      <kbd>Ctrl + S</kbd>- saves the file
-      <br />
-      <kbd>
-        Ctrl + O
-      </kbd>
-      opens files
-      <br />
-      <blockquote cite="https://en.wikipedia.org/wiki/Ray_Bradbury">
-        "Do you want to live forever? So you have to become a famous writer."
-      </blockquote>
-      <cite>
-        Dandelion Wine
-      </cite>
-      <br />
-      <br />
-      <mark>
-        Michael Jackson
-      </mark>
-      are really good
-      <br />
-      <meter value="5" min="0" max="10"> </meter>
-      <br />
-      <p>
-        a lot of words che and cool person
-      </p>
-      <br />
-      <pre>
-     bla blabla bla blabla bla
-     blabla bla  blabla bla     blabla bla
-     blabla bla       blabla bla          blabla bla
-    </pre
-      >
-      <br />
-      <progress value="52" max="100"> </progress>
-      <br />
-      My favourite singer is <s>Madona</s> Charley Ruth
-      <br />
-      <code> const a = 5 + 5</code>
-      <br />
-      <samp> Result: 10</samp>
-      <br />
-      <p>
-        Chris Ruth Chris Ruth <smal>mikky mikky </smal> mikky Chris Ruth Chris
-        Ruth Chris Ruth
-      </p>
-      <br />
-      <strong>
-        Very important and useful information
-      </strong>
-      <br />
-      <p>X<sub>2</sub></p>
-      <p>X<sup>2</sup></p>
-      <template>
-        <samp> Result: 10</samp>
-        <br />
-        <p>
-          Chris Ruth Chris Ruth <small>mikky mikky </small> mikky Chris Ruth
-          Chris Ruth Chris Ruth
-        </p>
-        <br />
-        <strong>
-          Very important and useful information
-        </strong>
-      </template>
-      <p>I love <u>cupcakes</u></p>
-      <br />
-    </aside>
-  </body> -->
-<head>
-  <title>Bootstrap</title>
-</head>
-<body>
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-      </li>
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-        <div class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <a class="dropdown-item" href="#">Something else here</a>
+    </nav>
+    <section role="main" class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="jumbotron">
+            <h1 class="display-4">Hello, world!</h1>
+            <p class="lead">
+              This is a simple hero unit, a simple jumbotron-style component for
+              calling extra attention to featured content or information.
+            </p>
+            <p>
+              It uses utility classes for typography and spacing to space
+              content out within the larger container.
+            </p>
+            <a class="btn btn btn-light btn-lg" href="#" role="button"
+              >Learn more</a
+            >
+          </div>
         </div>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+        <div class="col-md-6">
+          <img class="w-100" src="../src/assets/obl-01.jpg" alt="Main image" />
+        </div>
+      </div>
+    </section>
+    <section class="container for-whom">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 text-center">
+          <h2 class="my-3">Кому подойдет курс?</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-center">
+            <div class="card-body">
+              <div class="text-center icon-container">
+                <i class="fas fa-blind text-info"></i>
+              </div>
+              <h4>Junior Developer</h4>
+              <div class="description">
+                Lorem Ipsum является текст-заполнитель обычно используется в
+                графических, печать и издательской индустрии для
+                предварительного просмотра макета и визуальных макетах.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="text-center icon-container">
+                <i class="fas fa-walking text-info"></i>
+              </div>
+              <h4>Middle Developer</h4>
+              <div class="description">
+                Lorem Ipsum является текст-заполнитель обычно используется в
+                графических, печать и издательской индустрии для
+                предварительного просмотра макета и визуальных макетах.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card">
+            <div class="card-body">
+              <div class="text-center icon-container">
+                <i class="fas fa-running text-info"></i>
+              </div>
+              <h4>Senior Developer</h4>
+              <div class="description">
+                Lorem Ipsum является текст-заполнитель обычно используется в
+                графических, печать и издательской индустрии для
+                предварительного просмотра макета и визуальных макетах.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="container about-us text-center">
+      <div class="row">
+        <div class="col-md-8 offset-md-2 text-center">
+          <h2 class="my-3">О нашей школе</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2 text-center">
+          <p>
+            Lorem Ipsum является текст-заполнитель обычно используется в
+            графических, печать и издательской индустрии для предварительного
+            просмотра макета и визуальных макетах. Lorem Ipsum является
+            текст-заполнитель обычно используется в графических, печать и
+            издательской индустрии для предварительного просмотра макета и
+            визуальных макетах.
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8 offset-md-2 text-center">
+          <div class="row">
+            <div class="col-sm">
+              <img
+                class="small-square-images"
+                src="../src/assets/icons/html-5.png"
+                alt="HTML"
+              />
+            </div>
+            <div class="col-sm">
+              <img
+                class="small-square-images"
+                src="../src/assets/icons/css-3.png"
+                alt="CSS"
+              />
+            </div>
+            <div class="col-sm">
+              <img
+                class="small-square-images"
+                src="../src/assets/icons/javascript.png"
+                alt="JavaScript"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="conteinar-fluid map-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3 vertical-center">
+            <div class="register-form">
+              <h3 class="mb-3">Make your future happier! Register now!</h3>
+              <form>
+                <div class="form-row">
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="First name"
+                    />
+                  </div>
+                  <div class="col">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Last name"
+                    />
+                  </div>
+                </div>
+              </form>
+              <div class="form-row mt-2">
+                <button type="button" class="btn btn-success btn-lg btn-block">
+                  Register for course
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<main role="main" class="container">
-
-  <div class="starter-template">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
-  </div>
-
-</main><!-- /.container -->
-</body>
-  </html>
+    <div class="container-fluid">
+      <div class="container pt-3">
+        <div class="row">
+          <div class="col-md-6 col-xs-12">
+            Lorem Ipsum является текст-заполнитель обычно используется в
+            графических, печать и издательской индустрии для предварительного
+            просмотра макета и визуальных макетах.
+          </div>
+          <div class="col-md-6 col-xs-12">
+            Lorem Ipsum является текст-заполнитель обычно используется в
+            графических, печать и издательской индустрии для предварительного
+            просмотра макета и визуальных макетах.
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
