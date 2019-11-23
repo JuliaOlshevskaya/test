@@ -1,4 +1,5 @@
 import "../styles/index.scss";
+import "bootstrap";
 import "../styles/test.scss";
 import "./events";
 

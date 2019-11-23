@@ -1,42 +1,44 @@
-dfn {
-  color: salmon;
-}
-kbd {
-  background: sienna;
-}
-mark {
-  background: rgb(12, 202, 202);
-}
+@import "~bootstrap/scss/bootstrap";
 
-col {
-  border: 3px solid black;
-  background: rgb(60, 189, 206);
-}
+// dfn {
+//   color: salmon;
+// }
+// kbd {
+//   background: sienna;
+// }
+// mark {
+//   background: rgb(12, 202, 202);
+// }
 
-.ul-styled > li {
-  background-color: rgb(189, 83, 83);
-}
+// col {
+//   border: 3px solid black;
+//   background: rgb(60, 189, 206);
+// }
 
-.ol-styled > li > ol {
-  border: black solid 2px;
-}
-.dl-styled > dt {
-  background-color: rgb(113, 204, 21);
-}
-.dl-styled > dd {
-  color: rgb(189, 44, 0);
-}
+// .ul-styled > li {
+//   background-color: rgb(189, 83, 83);
+// }
 
-span + section {
-  background-color: rgba(82, 82, 129, 0.596);
-}
+// .ol-styled > li > ol {
+//   border: black solid 2px;
+// }
+// .dl-styled > dt {
+//   background-color: rgb(113, 204, 21);
+// }
+// .dl-styled > dd {
+//   color: rgb(189, 44, 0);
+// }
 
-blockquote ~ cite {
-  background-color: rgb(163, 218, 15);
-  border: black dashed 2px;
-}
+// span + section {
+//   background-color: rgba(82, 82, 129, 0.596);
+// }
 
-cite {
-  margin: 4px;
-  padding: 1px;
-}
+// blockquote ~ cite {
+//   background-color: rgb(163, 218, 15);
+//   border: black dashed 2px;
+// }
+
+// cite {
+//   margin: 4px;
+//   padding: 1px;
+// }
