@@ -24,19 +24,23 @@ section {
   height: 100px;
 }
 .map-section {
-  background: url(/src/assets/map.png.jpg) no-repeat center center fixed;
+  position: relative;
 }
-// .map-section::after {
-//   content: "";
-//   position: absolute;
-//   opacity: 0.3;
-//   top: 0;
-//   bottom: 0;
-//   left: 0;
-//   right: 0;
-//   z-index: -1;
-// }
+.map-section::after {
+  background: url(/src/assets/map.png.jpg) no-repeat center center fixed;
+  content: "";
+  position: absolute;
+  opacity: 0.3;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+}
 .register-form {
   margin-left: 25%;
   margin-top: 7%;
+}
+.pt-3 {
+  padding-bottom: 2rem;
 }
