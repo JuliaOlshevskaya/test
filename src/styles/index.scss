@@ -1,46 +1,33 @@
 @import "~bootstrap/scss/bootstrap";
-body {
-  padding-top: 5rem;
+
+html,
+body,
+.list-container {
+  height: 100%;
 }
-.jumbotron {
-  background: rgba(149, 213, 218, 0.425);
+.list-container > .row {
+  height: 50%;
+  border-bottom: 1px solid grey;
 }
-.icon-container {
-  margin-bottom: 2rem;
+.list-container > .col-6 {
+  border-right: 1px solid grey;
 }
-.icon-container {
-  font-size: 3rem;
+#importantAndUrgent {
+  background-color: rgba(224, 70, 145, 0.473);
 }
-.for-whom .card {
-  border: none;
+#importantAndNotUrgent {
+  background-color: rgba(164, 62, 241, 0.568);
 }
-section {
-  margin-bottom: 50px;
-  margin-top: 50px;
-  min-height: 40vh;
+#notImportantAndUrgent {
+  background-color: rgba(58, 241, 58, 0.541);
 }
-.small-square-images {
-  width: 100px;
-  height: 100px;
+#notImportantAndNotUrgent {
+  background-color: rgba(61, 57, 57, 0.445);
 }
-.map-section {
-  position: relative;
+.list-container ul {
+  list-style-type: none;
+  padding-left: 0;
 }
-.map-section::after {
-  background: url(/src/assets/map.png.jpg) no-repeat center center fixed;
-  content: "";
-  position: absolute;
-  opacity: 0.3;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: -1;
-}
-.register-form {
-  margin-left: 25%;
-  margin-top: 7%;
-}
-.pt-3 {
-  padding-bottom: 2rem;
+.doneList li {
+  text-decoration: line-through;
 }

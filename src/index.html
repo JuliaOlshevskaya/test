@@ -1,246 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>Bootstrap</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>To Do Lists</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
-      <a class="navbar-brand" href="#">My Memes</a>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarsExampleDefault"
-        aria-controls="navbarsExampleDefault"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#"
-              >Home <span class="sr-only">(current)</span></a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"
-              >Disabled</a
-            >
-          </li>
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="dropdown01"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
-              >Dropdown</a
-            >
-            <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </div>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input
-            class="form-control mr-sm-2"
-            type="text"
-            placeholder="Search"
-            aria-label="Search"
-          />
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">
-            Search
-          </button>
-        </form>
-      </div>
-    </nav>
-    <section role="main" class="container">
+    <!-- <i class="fas fa-trash-alt"></i> -->
+    <div class="container-fluid list-container">
       <div class="row">
-        <div class="col-md-6">
-          <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">
-              This is a simple hero unit, a simple jumbotron-style component for
-              calling extra attention to featured content or information.
-            </p>
-            <p>
-              It uses utility classes for typography and spacing to space
-              content out within the larger container.
-            </p>
-            <a class="btn btn btn-light btn-lg" href="#" role="button"
-              >Learn more</a
-            >
-          </div>
-        </div>
-        <div class="col-md-6">
-          <img class="w-100" src="../src/assets/obl-01.jpg" alt="Main image" />
-        </div>
-      </div>
-    </section>
-    <section class="container for-whom">
-      <div class="row">
-        <div class="col-md-8 offset-md-2 text-center">
-          <h2 class="my-3">Кому подойдет курс?</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card text-center">
-            <div class="card-body">
-              <div class="text-center icon-container">
-                <i class="fas fa-blind text-info"></i>
-              </div>
-              <h4>Junior Developer</h4>
-              <div class="description">
-                Lorem Ipsum является текст-заполнитель обычно используется в
-                графических, печать и издательской индустрии для
-                предварительного просмотра макета и визуальных макетах.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="text-center icon-container">
-                <i class="fas fa-walking text-info"></i>
-              </div>
-              <h4>Middle Developer</h4>
-              <div class="description">
-                Lorem Ipsum является текст-заполнитель обычно используется в
-                графических, печать и издательской индустрии для
-                предварительного просмотра макета и визуальных макетах.
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card">
-            <div class="card-body">
-              <div class="text-center icon-container">
-                <i class="fas fa-running text-info"></i>
-              </div>
-              <h4>Senior Developer</h4>
-              <div class="description">
-                Lorem Ipsum является текст-заполнитель обычно используется в
-                графических, печать и издательской индустрии для
-                предварительного просмотра макета и визуальных макетах.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="container about-us text-center">
-      <div class="row">
-        <div class="col-md-8 offset-md-2 text-center">
-          <h2 class="my-3">О нашей школе</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8 offset-md-2 text-center">
-          <p>
-            Lorem Ipsum является текст-заполнитель обычно используется в
-            графических, печать и издательской индустрии для предварительного
-            просмотра макета и визуальных макетах. Lorem Ipsum является
-            текст-заполнитель обычно используется в графических, печать и
-            издательской индустрии для предварительного просмотра макета и
-            визуальных макетах.
-          </p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-8 offset-md-2 text-center">
+        <div class="col-6" id="importantAndUrgent">
+          <h4>Important and Urgent</h4>
           <div class="row">
-            <div class="col-sm">
-              <img
-                class="small-square-images"
-                src="../src/assets/icons/html-5.png"
-                alt="HTML"
-              />
+            <div class="col-6">
+              <h6>To Do:</h6>
+              <ul>
+                <li><input type="checkbox" /> Task 1</li>
+                <li><input type="checkbox" /> Task 2</li>
+                <li><input type="checkbox" /> Task 3</li>
+              </ul>
             </div>
-            <div class="col-sm">
-              <img
-                class="small-square-images"
-                src="../src/assets/icons/css-3.png"
-                alt="CSS"
-              />
+            <div class="col-6">
+              <h6>Done:</h6>
+              <ul class="doneList">
+                <li><input type="checkbox" checked /> Task 1</li>
+                <li><input type="checkbox" checked /> Task 2</li>
+                <li><input type="checkbox" checked /> Task 3</li>
+              </ul>
             </div>
-            <div class="col-sm">
-              <img
-                class="small-square-images"
-                src="../src/assets/icons/javascript.png"
-                alt="JavaScript"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="conteinar-fluid map-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6 offset-md-3 vertical-center">
-            <div class="register-form">
-              <h3 class="mb-3">Make your future happier! Register now!</h3>
-              <form>
-                <div class="form-row">
-                  <div class="col">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="First name"
-                    />
-                  </div>
-                  <div class="col">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Last name"
-                    />
-                  </div>
+            <div class="row">
+              <div class="col-8">
+                <div class="form-group">
+                  <input type="text" class="form-control" />
                 </div>
-              </form>
-              <div class="form-row mt-2">
-                <button type="button" class="btn btn-success btn-lg btn-block">
-                  Register for course
+              </div>
+              <div class="col-4">
+                <button class="btn btn-primary btn-lg btn-block">
+                  Add Task
                 </button>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <div class="container-fluid">
-      <div class="container pt-3">
-        <div class="row">
-          <div class="col-md-6 col-xs-12">
-            Lorem Ipsum является текст-заполнитель обычно используется в
-            графических, печать и издательской индустрии для предварительного
-            просмотра макета и визуальных макетах.
-          </div>
-          <div class="col-md-6 col-xs-12">
-            Lorem Ipsum является текст-заполнитель обычно используется в
-            графических, печать и издательской индустрии для предварительного
-            просмотра макета и визуальных макетах.
+        <div class="col-6" id="importantAndNotUrgent">
+          <h4>Important and Not Urgent</h4>
+          <div class="row">
+            <div class="col-6">
+              <h6>To Do:</h6>
+              <ul>
+                <li><input type="checkbox" /> Task 1</li>
+                <li><input type="checkbox" /> Task 2</li>
+                <li><input type="checkbox" /> Task 3</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <h6>Done:</h6>
+              <ul class="doneList">
+                <li><input type="checkbox" checked /> Task 1</li>
+                <li><input type="checkbox" checked /> Task 2</li>
+                <li><input type="checkbox" checked /> Task 3</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="row">
-          <div class="col-12"></div>
+      </div>
+
+      <div class="row">
+        <div class="col-6" id="notImportantAndUrgent">
+          <h4>Not Important and Urgent</h4>
+          <div class="row">
+            <div class="col-6">
+              <h6>To Do:</h6>
+              <ul>
+                <li><input type="checkbox" /> Task 1</li>
+                <li><input type="checkbox" /> Task 2</li>
+                <li><input type="checkbox" /> Task 3</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <h6>Done:</h6>
+              <ul class="doneList">
+                <li><input type="checkbox" checked /> Task 1</li>
+                <li><input type="checkbox" checked /> Task 2</li>
+                <li><input type="checkbox" checked /> Task 3</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-6" id="notImportantAndNotUrgent">
+          <h4>Not Important and Not Urgent</h4>
+          <div class="row">
+            <div class="col-6">
+              <h6>To Do:</h6>
+              <ul>
+                <li><input type="checkbox" /> Task 1</li>
+                <li><input type="checkbox" /> Task 2</li>
+                <li><input type="checkbox" /> Task 3</li>
+              </ul>
+            </div>
+            <div class="col-6">
+              <h6>Done:</h6>
+              <ul class="doneList">
+                <li><input type="checkbox" checked /> Task 1</li>
+                <li><input type="checkbox" checked /> Task 2</li>
+                <li><input type="checkbox" checked /> Task 3</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
