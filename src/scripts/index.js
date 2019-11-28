@@ -9,29 +9,27 @@ let importantAndNotUrgent;
 let notImportantAndUrgent;
 let notImportantAndNotUrgent;
 
-(function() {
-  importantAndUrgent = document.getElementById("importantAndUrgent");
-  importantAndNotUrgent = document.getElementById("importantAndNotUrgent");
-  notImportantAndUrgent = document.getElementById("notImportantAndUrgent");
-  notImportantAndNotUrgent = document.getElementById(
-    "notImportantAndNotUrgent"
-  );
+importantAndUrgent = document.getElementById("importantAndUrgent");
+importantAndNotUrgent = document.getElementById("importantAndNotUrgent");
+notImportantAndUrgent = document.getElementById("notImportantAndUrgent");
+notImportantAndNotUrgent = document.getElementById("notImportantAndNotUrgent");
 
-  const quadrants = [
-    importantAndUrgent,
-    importantAndNotUrgent,
-    notImportantAndUrgent,
-    notImportantAndNotUrgent
-  ];
+const quadrants = [
+  importantAndUrgent,
+  importantAndNotUrgent,
+  notImportantAndUrgent,
+  notImportantAndNotUrgent
+];
+changingCheckboxes(quadrants);
 
-  quadrants.forEach(quadrant => {
-    const button = quadrant.getElementsByTagName("button")[0];
-    button.addEventListener("click", () => {
-      addNewTask(quadrant);
-    });
-    quadrant.addEventListener("click", () => {});
+quadrants.forEach(quadrant => {
+  const button = quadrant.getElementsByTagName("button")[0];
+  button.addEventListener("click", () => {
+    addNewTask(quadrant);
+    changingCheckboxes(quadrants);
+    removeTask(quadrants);
   });
-})();
+});
 
 function addNewTask(quadrantElement) {
   const value = getInputValue(quadrantElement);
@@ -52,7 +50,7 @@ function addNewItem(value, quadrant) {
 }
 function getListWithText(value) {
   const newListItem = document.createElement("li");
-  const checkbox = getCheckbox();
+  const checkbox = createCheckbox();
   const textOfNewListItem = document.createTextNode(" " + value);
   const space = document.createTextNode("  ");
   const icon = getDeleteIcon();
@@ -62,13 +60,48 @@ function getListWithText(value) {
   newListItem.appendChild(icon);
   return newListItem;
 }
-function getCheckbox() {
+function createCheckbox() {
   const input = document.createElement("input");
   input.type = "checkbox";
+  input.className = "active-checkbox";
   return input;
 }
 function getDeleteIcon() {
+  const span = document.createElement("span");
   const i = document.createElement("i");
   i.className = "fas fa-trash-alt";
-  return i;
+  span.className = "trash-icon";
+  span.appendChild(i);
+  return span;
+}
+
+function changingCheckboxes(quadrants) {
+  quadrants.forEach(quadrant => {
+    const collectionOfCheckboxes = quadrant.getElementsByClassName(
+      "active-checkbox"
+    );
+    collectionOfCheckboxes.forEach(activeCheckbox => {
+      activeCheckbox.parentNode.addEventListener("click", () => {
+        console.log(activeCheckbox);
+
+        activeCheckbox.parentNode.style.textDecoration = "line-through";
+        activeCheckbox.checked = true;
+      });
+    });
+  });
+}
+
+function removeTask(quadrants) {
+  quadrants.forEach(quadrant => {
+    const collectionOfIcons = quadrant.getElementsByClassName("trash-icon");
+
+    collectionOfIcons.forEach(deletingIcon => {
+      console.log(deletingIcon);
+      deletingIcon.addEventListener("click", () => {
+        console.log(deletingIcon.parentNode);
+
+        deletingIcon.parentNode.style.display = "none";
+      });
+    });
+  });
 }
