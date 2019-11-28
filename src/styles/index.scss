@@ -7,27 +7,60 @@ body,
 }
 .list-container > .row {
   height: 50%;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid black;
 }
-.list-container > .col-6 {
-  border-right: 1px solid grey;
+
+.header-background {
+  border-bottom: 1px solid rgb(19, 19, 19);
 }
+
 #importantAndUrgent {
   background-color: rgba(224, 70, 145, 0.473);
+  .header-background {
+    background-color: rgba(136, 15, 74, 0.473);
+  }
 }
 #importantAndNotUrgent {
   background-color: rgba(164, 62, 241, 0.568);
+  .header-background {
+    background-color: rgba(94, 12, 114, 0.473);
+  }
 }
 #notImportantAndUrgent {
   background-color: rgba(58, 241, 58, 0.541);
+  .header-background {
+    background-color: rgba(20, 104, 38, 0.473);
+  }
 }
 #notImportantAndNotUrgent {
   background-color: rgba(61, 57, 57, 0.445);
+  .header-background {
+    background-color: rgba(26, 24, 25, 0.473);
+  }
 }
 .list-container ul {
   list-style-type: none;
   padding-left: 0;
+  .fa-trash-alt {
+    display: none;
+  }
+  li {
+    cursor: pointer;
+  }
+  li:hover {
+    .fa-trash-alt {
+      display: inline;
+      color: rgba(17, 91, 134, 0.623);
+    }
+  }
 }
 .doneList li {
   text-decoration: line-through;
+}
+
+.h-15 {
+  height: 15%;
+}
+.h-10 {
+  height: 10%;
 }

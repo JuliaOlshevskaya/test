@@ -4,64 +4,144 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>To Do Lists</title>
+    <title>Matrix: To Do Lists</title>
   </head>
   <body>
-    <!-- <i class="fas fa-trash-alt"></i> -->
     <div class="container-fluid list-container">
       <div class="row">
         <div class="col-6" id="importantAndUrgent">
-          <h4>Important and Urgent</h4>
-          <div class="row">
+          <div class="row h-10 header-background">
+            <div class="col-12">
+              <h4>Important and Urgent</h4>
+            </div>
+          </div>
+
+          <div class="row h-75">
             <div class="col-6">
               <h6>To Do:</h6>
-              <ul>
-                <li><input type="checkbox" /> Task 1</li>
-                <li><input type="checkbox" /> Task 2</li>
-                <li><input type="checkbox" /> Task 3</li>
+              <ul class="todoList">
+                <li>
+                  <input type="checkbox" /> Task 1<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" /> Task 2<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" /> Task 3<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
               </ul>
             </div>
             <div class="col-6">
               <h6>Done:</h6>
               <ul class="doneList">
-                <li><input type="checkbox" checked /> Task 1</li>
-                <li><input type="checkbox" checked /> Task 2</li>
-                <li><input type="checkbox" checked /> Task 3</li>
+                <li>
+                  <input type="checkbox" checked /> Task 1<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" checked /> Task 2<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" checked /> Task 3<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
               </ul>
             </div>
-            <div class="row">
-              <div class="col-8">
-                <div class="form-group">
-                  <input type="text" class="form-control" />
-                </div>
+          </div>
+
+          <div class="row h-15">
+            <div class="col-8">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control input-for-new-tasks"
+                  placeholder="Add new Task"
+                />
               </div>
-              <div class="col-4">
-                <button class="btn btn-primary btn-lg btn-block">
-                  Add Task
-                </button>
-              </div>
+            </div>
+            <div class="col-4">
+              <button class="btn btn-primary btn-lg btn-block">
+                Add Task
+              </button>
             </div>
           </div>
         </div>
 
         <div class="col-6" id="importantAndNotUrgent">
-          <h4>Important and Not Urgent</h4>
-          <div class="row">
+          <div class="row h-10 header-background">
+            <div class="col-12">
+              <h4>Important and Not Urgent</h4>
+            </div>
+          </div>
+
+          <div class="row h-75">
             <div class="col-6">
               <h6>To Do:</h6>
-              <ul>
-                <li><input type="checkbox" /> Task 1</li>
-                <li><input type="checkbox" /> Task 2</li>
-                <li><input type="checkbox" /> Task 3</li>
+              <ul class="todoList">
+                <li>
+                  <input type="checkbox" /> Task 1<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" /> Task 2<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" /> Task 3<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
               </ul>
             </div>
+
             <div class="col-6">
               <h6>Done:</h6>
               <ul class="doneList">
-                <li><input type="checkbox" checked /> Task 1</li>
-                <li><input type="checkbox" checked /> Task 2</li>
-                <li><input type="checkbox" checked /> Task 3</li>
+                <li>
+                  <input type="checkbox" checked /> Task 1<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" checked /> Task 2<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" checked /> Task 3<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
               </ul>
+            </div>
+          </div>
+
+          <div class="row h-15">
+            <div class="col-8">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control input-for-new-tasks"
+                  placeholder="Add new Task"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <button class="btn btn-primary btn-lg btn-block">
+                Add Task
+              </button>
             </div>
           </div>
         </div>
@@ -69,44 +149,136 @@
 
       <div class="row">
         <div class="col-6" id="notImportantAndUrgent">
-          <h4>Not Important and Urgent</h4>
-          <div class="row">
+          <div class="row h-10 header-background">
+            <div class="col-12"><h4>Not Important and Urgent</h4></div>
+          </div>
+
+          <div class="row h-75">
             <div class="col-6">
               <h6>To Do:</h6>
-              <ul>
-                <li><input type="checkbox" /> Task 1</li>
-                <li><input type="checkbox" /> Task 2</li>
-                <li><input type="checkbox" /> Task 3</li>
+              <ul class="todoList">
+                <li>
+                  <input type="checkbox" /> Task 1<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" /> Task 2<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" /> Task 3<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
               </ul>
             </div>
+
             <div class="col-6">
               <h6>Done:</h6>
               <ul class="doneList">
-                <li><input type="checkbox" checked /> Task 1</li>
-                <li><input type="checkbox" checked /> Task 2</li>
-                <li><input type="checkbox" checked /> Task 3</li>
+                <li>
+                  <input type="checkbox" checked /> Task 1<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" checked /> Task 2<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" checked /> Task 3<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
               </ul>
             </div>
           </div>
+
+          <div class="row h-15">
+            <div class="col-8">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control input-for-new-tasks"
+                  placeholder="Add new Task"
+                />
+              </div>
+            </div>
+            <div class="col-4">
+              <button class="btn btn-primary btn-lg btn-block">
+                Add Task
+              </button>
+            </div>
+          </div>
         </div>
+
         <div class="col-6" id="notImportantAndNotUrgent">
-          <h4>Not Important and Not Urgent</h4>
-          <div class="row">
+          <div class="row h-10 header-background">
+            <div class="col-12"><h4>Not Important and Not Urgent</h4></div>
+          </div>
+
+          <div class="row h-75">
             <div class="col-6">
               <h6>To Do:</h6>
-              <ul>
-                <li><input type="checkbox" /> Task 1</li>
-                <li><input type="checkbox" /> Task 2</li>
-                <li><input type="checkbox" /> Task 3</li>
+              <ul class="todoList">
+                <li>
+                  <input type="checkbox" /> Task 1<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" /> Task 2<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" /> Task 3<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
               </ul>
             </div>
+
             <div class="col-6">
               <h6>Done:</h6>
               <ul class="doneList">
-                <li><input type="checkbox" checked /> Task 1</li>
-                <li><input type="checkbox" checked /> Task 2</li>
-                <li><input type="checkbox" checked /> Task 3</li>
+                <li>
+                  <input type="checkbox" checked /> Task 1<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" checked /> Task 2<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
+                <li>
+                  <input type="checkbox" checked /> Task 3<i
+                    class="fas fa-trash-alt"
+                  ></i>
+                </li>
               </ul>
+            </div>
+          </div>
+
+          <div class="row h-15">
+            <div class="col-8">
+              <div class="form-group">
+                <input
+                  type="text"
+                  class="form-control input-for-new-tasks"
+                  placeholder="Add new Task"
+                />
+              </div>
+            </div>
+
+            <div class="col-4">
+              <button class="btn btn-primary btn-lg btn-block">
+                Add Task
+              </button>
             </div>
           </div>
         </div>
