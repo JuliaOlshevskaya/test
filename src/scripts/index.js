@@ -29,6 +29,7 @@ let notImportantAndNotUrgent;
     button.addEventListener("click", () => {
       addNewTask(quadrant);
     });
+    quadrant.addEventListener("click", () => {});
   });
 })();
 
