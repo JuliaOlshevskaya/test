@@ -21,14 +21,18 @@ const quadrants = [
   notImportantAndNotUrgent
 ];
 changingCheckboxes(quadrants);
+removeTask(quadrants);
 
 quadrants.forEach(quadrant => {
   const button = quadrant.getElementsByTagName("button")[0];
   button.addEventListener("click", () => {
     addNewTask(quadrant);
     changingCheckboxes(quadrants);
+    listeningCheckboxForReplace(quadrant);
     removeTask(quadrants);
+    quadrant.getElementsByClassName("input-for-new-tasks")[0].value = " ";
   });
+  listeningCheckboxForReplace(quadrant);
 });
 
 function addNewTask(quadrantElement) {
@@ -82,8 +86,6 @@ function changingCheckboxes(quadrants) {
     );
     collectionOfCheckboxes.forEach(activeCheckbox => {
       activeCheckbox.parentNode.addEventListener("click", () => {
-        console.log(activeCheckbox);
-
         activeCheckbox.parentNode.style.textDecoration = "line-through";
         activeCheckbox.checked = true;
       });
@@ -94,14 +96,37 @@ function changingCheckboxes(quadrants) {
 function removeTask(quadrants) {
   quadrants.forEach(quadrant => {
     const collectionOfIcons = quadrant.getElementsByClassName("trash-icon");
-
     collectionOfIcons.forEach(deletingIcon => {
       console.log(deletingIcon);
       deletingIcon.addEventListener("click", () => {
         console.log(deletingIcon.parentNode);
-
         deletingIcon.parentNode.style.display = "none";
       });
+    });
+  });
+}
+
+function markAsDone(event) {
+  const checkbox = event.target;
+  const parentOfCheckbox = checkbox.parentElement;
+  parentOfCheckbox.remove();
+  return parentOfCheckbox.innerText;
+}
+
+function replaceTaskToDone(inputElement, quadrantElement) {
+  const deletedTaskFromLi = inputElement.parentElement;
+  const listWithDoneTasks = quadrantElement.getElementsByClassName(
+    "doneList"
+  )[0];
+  listWithDoneTasks.appendChild(deletedTaskFromLi);
+}
+
+function listeningCheckboxForReplace(quadrant) {
+  const getAllCheckboxes = quadrant.querySelectorAll("input[type='checkbox']");
+  getAllCheckboxes.forEach(input => {
+    input.addEventListener("click", event => {
+      markAsDone(event);
+      replaceTaskToDone(input, quadrant);
     });
   });
 }
