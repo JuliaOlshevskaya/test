@@ -26,14 +26,18 @@ removeTask(quadrants);
 quadrants.forEach(quadrant => {
   const button = quadrant.getElementsByTagName("button")[0];
   button.addEventListener("click", () => {
-    addNewTask(quadrant);
-    changingCheckboxes(quadrants);
-    listeningCheckboxForReplace(quadrant);
-    removeTask(quadrants);
-    quadrant.getElementsByClassName("input-for-new-tasks")[0].value = " ";
+    addButtonClicked(quadrant);
   });
   listeningCheckboxForReplace(quadrant);
 });
+
+function addButtonClicked(quadrant) {
+  addNewTask(quadrant);
+  changingCheckboxes(quadrants);
+  listeningCheckboxForReplace(quadrant);
+  removeTask(quadrants);
+  quadrant.getElementsByClassName("input-for-new-tasks")[0].value = " ";
+}
 
 function addNewTask(quadrantElement) {
   const value = getInputValue(quadrantElement);
@@ -97,9 +101,7 @@ function removeTask(quadrants) {
   quadrants.forEach(quadrant => {
     const collectionOfIcons = quadrant.getElementsByClassName("trash-icon");
     collectionOfIcons.forEach(deletingIcon => {
-      console.log(deletingIcon);
       deletingIcon.addEventListener("click", () => {
-        console.log(deletingIcon.parentNode);
         deletingIcon.parentNode.style.display = "none";
       });
     });
@@ -110,7 +112,6 @@ function markAsDone(event) {
   const checkbox = event.target;
   const parentOfCheckbox = checkbox.parentElement;
   parentOfCheckbox.remove();
-  return parentOfCheckbox.innerText;
 }
 
 function replaceTaskToDone(inputElement, quadrantElement) {
@@ -122,11 +123,40 @@ function replaceTaskToDone(inputElement, quadrantElement) {
 }
 
 function listeningCheckboxForReplace(quadrant) {
-  const getAllCheckboxes = quadrant.querySelectorAll("input[type='checkbox']");
-  getAllCheckboxes.forEach(input => {
+  const checkboxesInToDo = quadrant.getElementsByClassName("todoList")[0];
+  const checkboxesInDoneList = quadrant.getElementsByClassName("doneList")[0];
+  const checkboxesFromToDo = checkboxesInToDo.querySelectorAll(
+    "input[type='checkbox']"
+  );
+  const checkboxesFromDone = checkboxesInDoneList.querySelectorAll(
+    "input[type='checkbox']"
+  );
+
+  checkboxesFromToDo.forEach(input => {
     input.addEventListener("click", event => {
       markAsDone(event);
       replaceTaskToDone(input, quadrant);
     });
   });
+
+  checkboxesFromDone.forEach(input => {
+    input.addEventListener("click", event => {
+      replaceTaskIntoToDo(input, quadrant);
+      markAsToDo(event);
+    });
+  });
+}
+
+function markAsToDo(event) {
+  const checkbox = event.target;
+  const parentOfCheckbox = checkbox.parentElement;
+  parentOfCheckbox.remove();
+}
+
+function replaceTaskIntoToDo(inputElement, quadrantElement) {
+  const deletedTaskFromDone = inputElement.parentElement;
+  const listWithToDoTasks = quadrantElement.getElementsByClassName(
+    "todoList"
+  )[0];
+  listWithToDoTasks.appendChild(deletedTaskFromDone);
 }
