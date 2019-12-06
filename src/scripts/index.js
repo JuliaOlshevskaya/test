@@ -36,16 +36,15 @@ function addButtonClicked(quadrant) {
   // changingCheckboxes(quadrants);
   listeningCheckboxForReplace(quadrant);
   removeTask(quadrants);
-  quadrant.getElementsByClassName("input-for-new-tasks")[0].value = " ";
+  quadrant.getElementsByClassName("input-for-new-tasks")[0].value = "";
 }
 
 function addNewTask(quadrantElement) {
   const value = getInputValue(quadrantElement);
   if (value == "") {
-    addNewItem(value, quadrantElement);
-    console.log(addNewItem);
-  } else {
     alert("Please,write down your task");
+  } else {
+    addNewItem(value, quadrantElement);
   }
 }
 
