@@ -20,7 +20,7 @@ const quadrants = [
   notImportantAndUrgent,
   notImportantAndNotUrgent
 ];
-changingCheckboxes(quadrants);
+// changingCheckboxes(quadrants);
 removeTask(quadrants);
 
 quadrants.forEach(quadrant => {
@@ -33,7 +33,7 @@ quadrants.forEach(quadrant => {
 
 function addButtonClicked(quadrant) {
   addNewTask(quadrant);
-  changingCheckboxes(quadrants);
+  // changingCheckboxes(quadrants);
   listeningCheckboxForReplace(quadrant);
   removeTask(quadrants);
   quadrant.getElementsByClassName("input-for-new-tasks")[0].value = " ";
@@ -41,8 +41,9 @@ function addButtonClicked(quadrant) {
 
 function addNewTask(quadrantElement) {
   const value = getInputValue(quadrantElement);
-  if (value) {
+  if (value == "") {
     addNewItem(value, quadrantElement);
+    console.log(addNewItem);
   } else {
     alert("Please,write down your task");
   }
@@ -83,19 +84,19 @@ function getDeleteIcon() {
   return span;
 }
 
-function changingCheckboxes(quadrants) {
-  quadrants.forEach(quadrant => {
-    const collectionOfCheckboxes = quadrant.getElementsByClassName(
-      "active-checkbox"
-    );
-    collectionOfCheckboxes.forEach(activeCheckbox => {
-      activeCheckbox.parentNode.addEventListener("click", () => {
-        activeCheckbox.parentNode.style.textDecoration = "line-through";
-        activeCheckbox.checked = true;
-      });
-    });
-  });
-}
+// function changingCheckboxes(quadrants) {
+//   quadrants.forEach(quadrant => {
+//     const collectionOfCheckboxes = quadrant.getElementsByClassName(
+//       "active-checkbox"
+//     );
+//     collectionOfCheckboxes.forEach(activeCheckbox => {
+//       activeCheckbox.parentNode.addEventListener("click", () => {
+//         activeCheckbox.parentNode.style.textDecoration = "line-through";
+//         activeCheckbox.checked = true;
+//       });
+//     });
+//   });
+// }
 
 function removeTask(quadrants) {
   quadrants.forEach(quadrant => {
@@ -111,7 +112,7 @@ function removeTask(quadrants) {
 function markAsDone(event) {
   const checkbox = event.target;
   const parentOfCheckbox = checkbox.parentElement;
-  parentOfCheckbox.remove();
+  // parentOfCheckbox.remove();
 }
 
 function replaceTaskToDone(inputElement, quadrantElement) {
@@ -119,6 +120,9 @@ function replaceTaskToDone(inputElement, quadrantElement) {
   const listWithDoneTasks = quadrantElement.getElementsByClassName(
     "doneList"
   )[0];
+  inputElement.addEventListener("click", event => {
+    replaceTaskIntoToDo(inputElement, quadrantElement);
+  });
   listWithDoneTasks.appendChild(deletedTaskFromLi);
 }
 
@@ -150,7 +154,7 @@ function listeningCheckboxForReplace(quadrant) {
 function markAsToDo(event) {
   const checkbox = event.target;
   const parentOfCheckbox = checkbox.parentElement;
-  parentOfCheckbox.remove();
+  // parentOfCheckbox.remove();
 }
 
 function replaceTaskIntoToDo(inputElement, quadrantElement) {
@@ -158,5 +162,9 @@ function replaceTaskIntoToDo(inputElement, quadrantElement) {
   const listWithToDoTasks = quadrantElement.getElementsByClassName(
     "todoList"
   )[0];
+  inputElement.addEventListener("click", event => {
+    replaceTaskToDone(inputElement, quadrantElement);
+    markAsToDo(event);
+  });
   listWithToDoTasks.appendChild(deletedTaskFromDone);
 }
