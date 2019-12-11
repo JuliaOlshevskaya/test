@@ -52,20 +52,10 @@ users.forEach(user => {
 // Используйте foreach или for, а потом if внутри петли
 
 let iterationCounter = "Each iteration adds a *: ";
-iterationCounter += " *";
-iterationCounter += " *";
-iterationCounter += " *";
-iterationCounter += " *";
-iterationCounter += " *";
-iterationCounter += " *";
-iterationCounter += " *";
-iterationCounter += " *";
-iterationCounter += " *";
-iterationCounter += " *";
+for (let i = 0; i <= 10; i++) {
+  iterationCounter += " *";
+}
 console.log(iterationCounter);
-
-// for (let i = 0; i < 10; i++) {
-//   console.log(i);}
 // 3) Используя assigment operator(+=) поменяйте значение переменоой iterationCounter, добавляя по одной звездочке при каждой итерации
 
 // 4) Выведите в консоль значение iterationCounter. Ожидаемый результат "Each iteration adds a *: * * * * * * * * * *"
