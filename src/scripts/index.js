@@ -3,11 +3,10 @@ import "bootstrap";
 import "@fortawesome/fontawesome-free/js/all";
 import "../styles/test.scss";
 import "./events";
-
 const age = 17;
 age >= 18 && age <= 21
   ? console.log(
-      "I am younger than 21, so you can see this masage in your console"
+      "I am younger than 18, so you can see this masage in your console"
     )
   : console.log("I am 18, or even older!");
 
@@ -43,8 +42,6 @@ const users = [
 users.forEach(user => {
   if (user.visitedPark || user.boughtItems) {
     console.log("I was in the park, or made a shopping");
-  } else {
-    console.log("I was at home, and did not make any shopping");
   }
 });
 
