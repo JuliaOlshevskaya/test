@@ -510,3 +510,4 @@ const clients = [
     avatar: "https://robohash.org/autnatuseum.jpg?size=50x50&set=set1"
   }
 ];
+exports.clientsArray = clients;

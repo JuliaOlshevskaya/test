@@ -3,13 +3,14 @@ import "bootstrap";
 import "@fortawesome/fontawesome-free/js/all";
 import "../styles/test.scss";
 import "./events";
-import "./data";
+var clients = require("./data").clientsArray;
 
-function displayData() {
+function displayData(clientsList = clients) {
   const ul = document.querySelector("#clientsData");
-  clients.forEach(client => {
+  clientsList.forEach(client => {
     ul.appendChild(getLiElement(client));
   });
+  sumAmount(clientsList);
 }
 function getLiElement(client) {
   const newLi = document.createElement("li");
@@ -25,22 +26,24 @@ function getLiElement(client) {
   div.appendChild(text);
   newLi.appendChild(avatar);
   newLi.appendChild(div);
-  ul.appendChild(newLi);
+  return newLi;
 }
 
-function sortList(clients) {
+function sortList(order) {
   const sortedClients = clients.sort((lastClient, nextClient) => {
     if (order == "ascending") {
-      lastClient.lastName > nextClient.lastName ? 1 : -1;
+      lastClient.firstName > nextClient.firstName ? 1 : -1;
     } else {
-      lastClient.lastName < nextClient.lastName ? 1 : -1;
+      lastClient.firstName < nextClient.firstName ? 1 : -1;
     }
   });
   console.table(sortedClients);
-  refreshData();
+  refreshData(sortedClients);
 }
-function refreshData() {
+
+function refreshData(updatedClients) {
   clearList();
+  displayData(updatedClients);
 }
 
 function clearList() {
@@ -50,8 +53,50 @@ function clearList() {
   }
 }
 
+function filterList() {
+  const filterString = document
+    .querySelector("#filterInput")
+    .value.toLowerCase()
+    .trim();
+  if (filterString) {
+    const filteredClients = clients.filter(client => {
+      return (
+        client.firstName
+          .toLowerCase()
+          .trim()
+          .includes(filteredClients) ||
+        client.lastName
+          .toLowerCase()
+          .trim()
+          .includes(filteredClients) ||
+        client.email
+          .toLowerCase()
+          .trim()
+          .includes(filteredClients)
+      );
+    });
+    refreshData(filteredClients);
+  } else {
+    refreshData(clients);
+  }
+}
+
+function sumAmount(clientsList = clients) {
+  const total = clientsList.reduce((amount, client) => {
+    return amount + removeCurrencyFromAmount(client.amount);
+  }, 0);
+  document.querySelectorAll("totalAmountContainer").forEach(element => {
+    element.innerHTML = total.toFixed(2);
+  });
+}
+function removeCurrencyFromAmount(amount) {
+  return Number(amount.slice(1));
+}
+
 window.displayData = displayData;
 window.getLiElement = getLiElement;
 window.sortList = sortList;
+window.filterList = filterList;
+window.sumAmount = sumAmount;
 window.refreshData = refreshData;
 window.clearList = clearList;

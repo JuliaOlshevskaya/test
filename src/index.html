@@ -8,20 +8,23 @@
     <nav class="navbar navbar-light bg-light sticky-top">
       <a class="navbar-brand">Clients list</a>
       <form class="form-inline">
-        <input 
+		<input 
+		  id="filterInput"
           class="form-control mr-sm-2" 
           type="Start" 
           placeholder="Search" 
-          aria-label="Search"
+		  aria-label="Search"
+		  onkeyup="filterList()"
           />
-        <button class="btn btn-outline-success my-2 my-sm-0" type="button">
+        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="filterList()">
           Filter
-        </button>
+        </button> -->
         <div class="btn-group mx-2" role="group" aria-label="First group">
           <button type="button" class="btn btn-secondary" onclick="sortList('ascending')">A-Z</button>
           <button type="button" class="btn btn-secondary" onclick="sortList('descending')">Z-A</button>
         </div>
-      </form>
+	  </form>
+	  <a>$<span class="totalAmountContainer">00.00</span></a>
     </nav>
     <div class="row">
       <div class="col-12">
@@ -283,7 +286,16 @@
 					</li>
 			  </ul>
       </div>
-    </div>
+	</div>
+	<div class="row">
+		<div class="col-12">
+			<div class="text-right">
+				<h3>Total: $<span class="totalAmountContainer">00.00</span></h3>
+			</div>
+		</div>
+	</div>
+	<!-- <div class="row">
+	</div> -->
   </div>
 </body>
 </html>
