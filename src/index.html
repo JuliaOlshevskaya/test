@@ -22,23 +22,40 @@
           <div class="btn-group mx-2" role="group" aria-label="First group">
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-outline-secondary"
               onclick="sortList('ascending')"
             >
               A-Z
             </button>
             <button
               type="button"
-              class="btn btn-secondary"
+              class="btn btn-outline-secondary"
               onclick="sortList('descending')"
             >
               Z-A
+            </button>
+          </div>
+          <div class="btn-group mx-2" role="group" aria-label="First group">
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              onclick="sortGender('male')"
+            >
+              Male
+            </button>
+            <button
+              type="button"
+              class="btn btn-outline-secondary"
+              onclick="sortGender('female')"
+            >
+              Female
             </button>
           </div>
         </form>
         <a>$<span class="totalAmountContainer"></span></a>
       </nav>
     </section>
+
     <section class="container resultList">
       <div class="row">
         <div class="col-12">
