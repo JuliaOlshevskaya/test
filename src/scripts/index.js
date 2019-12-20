@@ -16,18 +16,31 @@ function displayData(clientsList = clients) {
 function getLiElement(client) {
   const newLi = document.createElement("li");
   const avatar = document.createElement("img");
-  const div = document.createElement("div");
   newLi.className = "media";
   avatar.className = "mr-3 align-self-center";
-  div.className = "media-body";
   avatar.setAttribute("src", client.avatar);
-  const text = document.createTextNode(
-    `${client.lastName} ${client.firstName} - ${client.email}, ${client.gender} (${client.date} - ${client.amount})`
-  );
-  div.appendChild(text);
   newLi.appendChild(avatar);
-  newLi.appendChild(div);
+  newLi.appendChild(createCLientDescription(client));
   return newLi;
+}
+
+function createCLientDescription(client) {
+  const div = document.createElement("div");
+  div.className = "media-body";
+  const mailLink = document.createElement("a");
+  mailLink.setAttribute("href", `mailto:${client.email}`);
+  mailLink.innerHTML = client.email;
+  const textPart1 = document.createTextNode(
+    `${client.lastName} ${client.firstName} - `
+  );
+  const textPart2 = document.createTextNode(
+    ` ${client.gender} (${client.date} - ${client.amount})`
+  );
+  div.appendChild(textPart1);
+  div.appendChild(mailLink);
+  div.appendChild(textPart2);
+
+  return div;
 }
 
 function sortList(order) {
@@ -64,20 +77,24 @@ function filterList() {
         client.firstName
           .toLowerCase()
           .trim()
-          .includes(filteredClients) ||
+          .includes(filterString) ||
         client.lastName
           .toLowerCase()
           .trim()
-          .includes(filteredClients) ||
+          .includes(filterString) ||
         client.email
           .toLowerCase()
           .trim()
-          .includes(filteredClients)
+          .includes(filterString)
       );
     });
     refreshData(filteredClients);
+    filteredClients.length === 0
+      ? showNotFoundSection()
+      : showResultListSection();
   } else {
     refreshData(clients);
+    showResultListSection();
   }
 }
 
@@ -92,6 +109,14 @@ function sumAmount(clientsList = clients) {
 function removeCurrencyFromAmount(amount) {
   return Number(amount.slice(1));
 }
+function showNotFoundSection() {
+  document.querySelector(".resultList").style.display = "none";
+  document.querySelector(".notFound").style.display = "block";
+}
+function showResultListSection() {
+  document.querySelector(".resultList").style.display = "block";
+  document.querySelector(".notFound").style.display = "none";
+}
 
 window.displayData = displayData;
 window.getLiElement = getLiElement;
@@ -101,3 +126,5 @@ window.sumAmount = sumAmount;
 window.refreshData = refreshData;
 window.clearList = clearList;
 window.removeCurrencyFromAmount = removeCurrencyFromAmount;
+window.showNotFoundSection = showNotFoundSection;
+window.showResultListSection = showResultListSection;
