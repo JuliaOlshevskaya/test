@@ -53,6 +53,16 @@ function sortList(order) {
   });
   refreshData(sortedClients);
 }
+function sortGender(order) {
+  const sortedGender = clients.sort(client => {
+    if (order == "male") {
+      return client.gender;
+    } else {
+      console.log("female");
+    }
+  });
+  refreshData(sortedGender);
+}
 
 function refreshData(updatedClients) {
   clearList();
@@ -89,33 +99,39 @@ function filterList() {
       );
     });
     refreshData(filteredClients);
-    filteredClients.length === 0
-      ? showNotFoundSection()
-      : showResultListSection();
+    showDifferentSection(filteredClients);
   } else {
     refreshData(clients);
-    showResultListSection();
   }
 }
-
 function sumAmount(clientsList = clients) {
   const total = clientsList.reduce((amount, client) => {
     return amount + removeCurrencyFromAmount(client.amount);
   }, 0);
-  document.querySelectorAll("totalAmountContainer").forEach(element => {
+  document.querySelectorAll(".totalAmountContainer").forEach(element => {
     element.innerHTML = total.toFixed(2);
   });
 }
 function removeCurrencyFromAmount(amount) {
   return Number(amount.slice(1));
 }
-function showNotFoundSection() {
-  document.querySelector(".resultList").style.display = "none";
-  document.querySelector(".notFound").style.display = "block";
-}
-function showResultListSection() {
-  document.querySelector(".resultList").style.display = "block";
-  document.querySelector(".notFound").style.display = "none";
+// function showNotFoundSection() {
+//   document.querySelector(".resultList").style.display = "none";
+//   document.querySelector(".notFound").style.display = "block";
+// }
+// function showResultListSection() {
+//   document.querySelector(".resultList").style.display = "block";
+//   document.querySelector(".notFound").style.display = "none";
+// }
+
+function showDifferentSection(filteredClients) {
+  if (filteredClients.length === 0) {
+    document.querySelector(".resultList").style.display = "none";
+    document.querySelector(".notFound").style.display = "block";
+  } else {
+    document.querySelector(".resultList").style.display = "block";
+    document.querySelector(".notFound").style.display = "none";
+  }
 }
 
 window.displayData = displayData;
@@ -126,5 +142,7 @@ window.sumAmount = sumAmount;
 window.refreshData = refreshData;
 window.clearList = clearList;
 window.removeCurrencyFromAmount = removeCurrencyFromAmount;
-window.showNotFoundSection = showNotFoundSection;
-window.showResultListSection = showResultListSection;
+// window.showNotFoundSection = showNotFoundSection;
+// window.showResultListSection = showResultListSection;
+window.sortGender = sortGender;
+window.showDifferentSection = showDifferentSection;
