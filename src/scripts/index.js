@@ -5,6 +5,7 @@ import "../styles/test.scss";
 import "./events";
 var clients = require("./data").clientsArray;
 
+displayData(clients);
 function displayData(clientsList = clients) {
   const ul = document.querySelector("#clientsData");
   clientsList.forEach(client => {
@@ -32,12 +33,11 @@ function getLiElement(client) {
 function sortList(order) {
   const sortedClients = clients.sort((lastClient, nextClient) => {
     if (order == "ascending") {
-      lastClient.firstName > nextClient.firstName ? 1 : -1;
+      return lastClient.lastName > nextClient.lastName ? 1 : -1;
     } else {
-      lastClient.firstName < nextClient.firstName ? 1 : -1;
+      return lastClient.lastName < nextClient.lastName ? 1 : -1;
     }
   });
-  console.table(sortedClients);
   refreshData(sortedClients);
 }
 
@@ -100,3 +100,4 @@ window.filterList = filterList;
 window.sumAmount = sumAmount;
 window.refreshData = refreshData;
 window.clearList = clearList;
+window.removeCurrencyFromAmount = removeCurrencyFromAmount;

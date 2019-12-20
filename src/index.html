@@ -1,301 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <title>My Clients Data</title>
-</head>
-<body>
-  <div class="container">
-    <nav class="navbar navbar-light bg-light sticky-top">
-      <a class="navbar-brand">Clients list</a>
-      <form class="form-inline">
-		<input 
-		  id="filterInput"
-          class="form-control mr-sm-2" 
-          type="Start" 
-          placeholder="Search" 
-		  aria-label="Search"
-		  onkeyup="filterList()"
+    <title>My Clients Data</title>
+  </head>
+  <body>
+    <section class="container">
+      <nav class="navbar navbar-light bg-light sticky-top">
+        <a class="navbar-brand">Clients list</a>
+        <form class="form-inline">
+          <input
+            id="filterInput"
+            class="form-control mr-sm-2"
+            type="Start"
+            placeholder="Search"
+            aria-label="Search"
+            onkeyup="filterList()"
           />
-        <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="filterList()">
+          <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="button" onclick="filterList()">
           Filter
         </button> -->
-        <div class="btn-group mx-2" role="group" aria-label="First group">
-          <button type="button" class="btn btn-secondary" onclick="sortList('ascending')">A-Z</button>
-          <button type="button" class="btn btn-secondary" onclick="sortList('descending')">Z-A</button>
-        </div>
-	  </form>
-	  <a>$<span class="totalAmountContainer">00.00</span></a>
-    </nav>
-    <div class="row">
-      <div class="col-12">
-        <ul class="list-unstyled" id="clientsData">
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/omnisveniamqui.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Demetris Nerheny - dnerheny0@timesonline.co.uk, Male (7/28/2019 - $2.08)
-            </div>
-          </li>
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/sapientedoloret.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Ameline Labusquiere - alabusquiere1@meetup.com, Female (5/3/2019 - $9.85)
-            </div>
-          </li>
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/etnonquam.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Glenn Eccersley - geccersley2@google.com, Female (11/18/2019 - $5.57)
-            </div>
-          </li>
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/autemutquos.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Mab Witchell - mwitchell3@newsvine.com, Female (2/10/2019 - $2.37)
-            </div>
-          </li>
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/beataecorruptiut.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Otha Parlet - oparlet4@angelfire.com, Female (3/14/2019 - $8.99)
-            </div>
-          </li>
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/nesciuntiustoqui.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Udale Winslet - uwinslet5@facebook.com, Male (10/23/2019 - $1.91)
-            </div>
-          </li>
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/etdelenitiqui.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Chrissie Brecher - cbrecher6@nasa.gov, Female (10/7/2019 - $9.02)
-            </div>
-          </li>
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/voluptatemrerumpraesentium.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Whitaker Stalman - wstalman7@bloglines.com, Male (3/13/2019 - $6.05)
-
-            </div>
-          </li>
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/etetlaudantium.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Anthea Shapcott - ashapcott8@barnesandnoble.com, Female (6/28/2019 - $7.41)
-
-            </div>
-          </li>
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/repudiandaeeumrerum.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Risa Bedder - rbedder9@myspace.com, Female (3/15/2019 - $2.46)
-
-            </div>
-          </li>
-          <li class="media">
-            <img class="mr-3 align-self-center" src="https://robohash.org/autemdolorenesciunt.jpg?size=50x50&amp;set=set1">
-            <div class="media-body">Granville Antonio - gantonioa@aboutads.info, Male (8/7/2019 - $2.07)
-
-            </div>
-          </li>
-          <li class="media">
-              <img class="mr-3 align-self-center" src="https://robohash.org/modivoluptateunde.jpg?size=50x50&amp;set=set1">
-              <div class="media-body">Walton Dexter - wdexterb@ehow.com, Male (7/1/2019 - $8.58)
-
+          <div class="btn-group mx-2" role="group" aria-label="First group">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="sortList('ascending')"
+            >
+              A-Z
+            </button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="sortList('descending')"
+            >
+              Z-A
+            </button>
           </div>
-          </li>
-          <li class="media">
-          <img class="mr-3 align-self-center" src="https://robohash.org/aliasquiet.jpg?size=50x50&amp;set=set1">
-              <div class="media-body">Thaddus Lisett - tlisettc@reference.com, Male (10/27/2019 - $0.99)
- 					</div>
-  		    </li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/quosnonsimilique.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Lorita Mc Ilory - lmciloryd@chron.com, Female (3/20/2019 - $3.16)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/officiiscorporissuscipit.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Gareth Esch - gesche@liveinternet.ru, Male (11/7/2019 - $5.53)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/estodiout.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Pail Rohfsen - prohfsenf@phoca.cz, Male (1/6/2019 - $9.50)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/architectoeumveritatis.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Linda Villaron - lvillarong@tuttocitta.it, Female (12/19/2018 - $9.93)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/debitisexcepturiquia.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Alisander Abbatucci - aabbatuccih@mozilla.com, Male (9/24/2019 - $7.61)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/oditvelitnon.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Belva Mingardo - bmingardoi@techcrunch.com, Female (7/10/2019 - $3.40)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/explicaboquosvel.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Candida Drummer - cdrummerj@un.org, Female (4/11/2019 - $6.32)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/hiceiusmollitia.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Leslie Jakab - ljakabk@seesaa.net, Male (5/17/2019 - $7.29)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/accusantiumatfugiat.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Gussi Bratley - gbratleyl@adobe.com, Female (12/4/2018 - $2.91)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/reiciendisesseea.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Nicky Hollow - nhollowm@nifty.com, Male (7/10/2019 - $4.04)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/doloremqueassumendaexcepturi.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Evita Raysdale - eraysdalen@diigo.com, Female (10/28/2019 - $2.91)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/quasquiculpa.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Saidee Seathwright - sseathwrighto@i2i.jp, Female (6/4/2019 - $3.18)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/nonvoluptatibusvel.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Joni Paty - jpatyp@so-net.ne.jp, Female (4/3/2019 - $4.68)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/rerummodicorrupti.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Marc Laister - mlaisterq@washington.edu, Male (6/18/2019 - $2.57)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/necessitatibusfugaet.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Casandra Douty - cdoutyr@linkedin.com, Female (9/24/2019 - $3.41)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/autquosrecusandae.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Ramsey Grisewood - rgrisewoods@addtoany.com, Male (11/9/2019 - $4.58)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/quassitvoluptate.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Evyn Rehor - erehort@rambler.ru, Male (7/10/2019 - $2.43)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/temporaassumendapossimus.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Clarette Bellenie - cbellenieu@imgur.com, Female (5/27/2019 - $5.22)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/uttemporehic.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Christiana Olpin - colpinv@163.com, Female (12/22/2018 - $9.59)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/nullaoditdeleniti.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Brande Ovize - bovizew@theguardian.com, Female (11/10/2019 - $3.10)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/iddelenitiexcepturi.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Garret Marriot - gmarriotx@meetup.com, Male (7/10/2019 - $6.67)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/minusnobisquasi.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Amory Janssen - ajansseny@so-net.ne.jp, Male (4/18/2019 - $5.46)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/sitnisiet.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Sholom Stroton - sstrotonz@about.me, Male (8/3/2019 - $4.67)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/excepturivoluptatemesse.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Angeline Tevelov - atevelov10@edublogs.org, Female (9/25/2019 - $3.57)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/rerumharumet.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Eleanor Micallef - emicallef11@hugedomains.com, Female (6/3/2019 - $4.47)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/sitoditrerum.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Ilene Kellen - ikellen12@dyndns.org, Female (9/17/2019 - $4.54)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/explicabovoluptatemodi.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Chalmers Pearton - cpearton13@sphinn.com, Male (10/12/2019 - $9.46)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/aspernaturetnecessitatibus.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Caz Astley - castley14@blogspot.com, Male (8/6/2019 - $3.76)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/consequaturinciduntconsequatur.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Gram Culverhouse - gculverhouse15@home.pl, Male (2/26/2019 - $3.49)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/minusestquos.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Drona Muckeen - dmuckeen16@cisco.com, Female (7/27/2019 - $0.31)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/fugiatipsaomnis.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Haleigh Stendell - hstendell17@china.com.cn, Male (12/12/2018 - $4.87)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/doloremrationeeligendi.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Jade Miettinen - jmiettinen18@jigsy.com, Female (8/4/2019 - $3.27)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/sedsuntet.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Grange Rheaume - grheaume19@rambler.ru, Male (10/17/2019 - $9.61)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/indistinctiodicta.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Merna Peetermann - mpeetermann1a@unc.edu, Female (4/25/2019 - $6.54)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/quivitaeipsum.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Marice Full - mfull1b@hao123.com, Female (11/15/2019 - $1.07)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/doloreliberofacere.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Neils Gourley - ngourley1c@examiner.com, Male (5/29/2019 - $3.70)
- 					</div>
-					</li>
-					<li class="media">
-					<img class="mr-3 align-self-center" src="https://robohash.org/autnatuseum.jpg?size=50x50&amp;set=set1">
-					<div class="media-body">Issie Skill - iskill1d@linkedin.com, Female (9/7/2019 - $9.18)
- 					</div>
-					</li>
-			  </ul>
+        </form>
+        <a>$<span class="totalAmountContainer"></span></a>
+      </nav>
+      <div class="row">
+        <div class="col-12">
+          <ul class="list-unstyled" id="clientsData"></ul>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-12">
+          <div class="text-right">
+            <h3>Total: $<span class="totalAmountContainer">00.00</span></h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- <div class="row">
+	<div class="col-12">
+		<h1 class="display-2">Sorry, nothing was found</h1>
 	</div>
-	<div class="row">
-		<div class="col-12">
-			<div class="text-right">
-				<h3>Total: $<span class="totalAmountContainer">00.00</span></h3>
-			</div>
-		</div>
-	</div>
-	<!-- <div class="row">
-	</div> -->
-  </div>
-</body>
+  </div> -->
+  </body>
 </html>
