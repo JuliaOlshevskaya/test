@@ -53,15 +53,12 @@ function sortList(order) {
   });
   refreshData(sortedClients);
 }
-function sortGender(order) {
-  const sortedGender = clients.sort(client => {
-    if (order == "male") {
-      return client.gender;
-    } else {
-      console.log("female");
-    }
+function filterGender(gender) {
+  const filterGender = clients.filter(client => {
+    return client.gender == gender;
   });
-  refreshData(sortedGender);
+  console.table(filterGender);
+  refreshData(filterGender);
 }
 
 function refreshData(updatedClients) {
@@ -144,5 +141,5 @@ window.clearList = clearList;
 window.removeCurrencyFromAmount = removeCurrencyFromAmount;
 // window.showNotFoundSection = showNotFoundSection;
 // window.showResultListSection = showResultListSection;
-window.sortGender = sortGender;
+window.filterGender = filterGender;
 window.showDifferentSection = showDifferentSection;
